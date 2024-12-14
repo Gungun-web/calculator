@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .key-active {
+      transform: scale(0.95);
+      transition: transform 0.1s;
+    }
+    .calc-btn {
+      padding: 25px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.1s, box-shadow 0.2s;
+    }
+    .calc-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    #display {
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white flex justify-center items-center min-h-screen">
+
+  <div class="bg-gray-800 rounded-lg shadow-xl p-4 w-full max-w-xs">
+    <div class="bg-gray-700 rounded-lg p-4 mb-4 text-right text-2xl font-mono h-16 flex items-center justify-end">
+      <span id="display">0</span>
+    </div>
+
+    <div class="grid grid-cols-4 gap-3">
+      <button class="calc-btn bg-gray-600 hover:bg-gray-700" data-value="C">C</button>
+      <button class="calc-btn bg-gray-600 hover:bg-gray-700" data-value="DEL">DEL</button>
+      <button class="calc-btn bg-gray-600 hover:bg-gray-700" data-value="%">%</button>
+      <button class="calc-btn bg-orange-500 hover:bg-orange-600" data-value="/">÷</button>
+
+      <button class="calc-btn bg-gray-600 hover:bg-gray-700" data-value="7">7</button>
+      <button class="calc-btn bg-gray-600 hover:bg-gray-700" data-value="8">8</button>
+      <button class="calc-btn bg-gray-600 hover:bg-gray-700" data-value="9">9</button>
+      <button class="calc-btn bg-orange-500 hover:bg-orange-600" data-value="*">×</button>
+
+      <button class="calc-btn bg-gray-600 hover:bg-gray-700" data-value="4">4</button>
+      <button class="calc-btn bg-gray-600 hover:bg-gray-700" data-value="5">5</button>
+      <button class="calc-btn bg-gray-600 hover:bg-gray-700" data-value="6">6</button>
+      <button class="calc-btn bg-orange-500 hover:bg-orange-600" data-value="-">−</button>
+
+      <button class="calc-btn bg-gray-600 hover:bg-gray-700" data-value="1">1</button>
+      <button class="calc-btn bg-gray-600 hover:bg-gray-700" data-value="2">2</button>
+      <button class="calc-btn bg-gray-600 hover:bg-gray-700" data-value="3">3</button>
+      <button class="calc-btn bg-orange-500 hover:bg-orange-600" data-value="+">+</button>
+
+      <button class="calc-btn bg-gray-600 hover:bg-gray-700 col-span-2" data-value="0">0</button>
+      <button class="calc-btn bg-gray-600 hover:bg-gray-700" data-value=".">.</button>
+      <button class="calc-btn bg-green-500 hover:bg-green-600" data-value="=">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"> </script>
+</body>
+</html>
